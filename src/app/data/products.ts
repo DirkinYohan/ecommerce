@@ -136,7 +136,7 @@ export const products: Product[] = [
     name: "Conjunto Deportivo Niño",
     description: "Conjunto deportivo para niño con diseño cómodo y moderno",
     price: "$ 75.000",
-    image: "https://images.unsplash.com/photo-1581094794329-c6ade7c210b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://www.sportline.com.co/media/catalog/product/k/c/kc0349_apparel-front-center-view.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
     category: "Niños",
     subcategory: "Conjuntos",
     isNew: true,
@@ -144,17 +144,17 @@ export const products: Product[] = [
     colors: [
       { 
         name: "Azul", 
-        image: "https://images.unsplash.com/photo-1581094794329-c6ade7c210b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+        image: "https://www.sportline.com.co/media/catalog/product/k/c/kc0349_apparel-back-center-view.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
         mainImage: "https://images.unsplash.com/photo-1581094794329-c6ade7c210b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
       },
       { 
         name: "Rojo", 
-        image: "https://images.unsplash.com/photo-1581094794329-c6ade7c210b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80&sat=100&hue=0",
+        image: "https://m.media-amazon.com/images/I/61Dpx3vrDJL._AC_UY1000_.jpg",
         mainImage: "https://images.unsplash.com/photo-1581094794329-c6ade7c210b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80&sat=100&hue=0"
       },
       { 
         name: "Verde", 
-        image: "https://images.unsplash.com/photo-1581094794329-c6ade7c210b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80&sat=100&hue=120",
+        image: "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ffe2ce7595d244d6922cf33e87e19271_9366/camiseta-tiro-24-kids.jpg",
         mainImage: "https://images.unsplash.com/photo-1581094794329-c6ade7c210b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80&sat=100&hue=120"
       }
     ],
@@ -170,7 +170,7 @@ export const products: Product[] = [
     name: "Vestido Niña Florido",
     description: "Hermoso vestido para niña con estampado floral",
     price: "$ 65.000",
-    image: "https://images.unsplash.com/photo-1599447292183-31e20bf6e249?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcREkSFkoyEVyuFtMbItzYvktklfRoaXBHSbyKNQ-rXXp9VgeBXZK1AYgPKtFdM7DO8spHyy1ETY74jp-Bd5E09GX1NxUN6c6xk8aPLuIoDHn_LA4bwsDxXQYdY&usqp=CAc",
     category: "Niñas",
     subcategory: "Vestidos",
     isNew: true,
@@ -178,7 +178,7 @@ export const products: Product[] = [
     colors: [
       { 
         name: "Rosa", 
-        image: "https://images.unsplash.com/photo-1599447292183-31e20bf6e249?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+        image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRIvpqyY_GAkMrvJM17Hzej1034rgGjxolNkP78zN6t42ZBi85f9tlwkj3vP1sQBIDmgY57-21-OhfEjMBnSBK5B3RF2qk_5jubAa9xds79dnRsOqbOGpQ_GQ&usqp=CAc",
         mainImage: "https://images.unsplash.com/photo-1599447292183-31e20bf6e249?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
       },
       { 
@@ -188,7 +188,7 @@ export const products: Product[] = [
       },
       { 
         name: "Blanco", 
-        image: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+        image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRKQCGERviANDI0DFO0Fo9q2-uLSPG4iheHO1wkMGP52mfUOzCTC5OYaaWkP72eVZ7t4nvf2xs4C57K_SiCJd_85cucEyIGduu0KIMzZupulK_r22hTYaiVPg&usqp=CAc",
         mainImage: "https://images.unsplash.com/photo-1519457431-44ccd64a579b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
       }
     ],

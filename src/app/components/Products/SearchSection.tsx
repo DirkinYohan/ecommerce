@@ -29,7 +29,7 @@ export default function SearchSection({ searchTerm, setSearchTerm, filteredProdu
           </div>
           {searchTerm && (
             <p className="text-sm text-gray-600 mt-3 text-center">
-              {filteredProductsCount} producto(s) encontrado(s) para "<span className="font-semibold">{searchTerm}</span>"
+              {filteredProductsCount} producto(s) encontrado(s) para &quot;<span className="font-semibold">{searchTerm}</span>&quot;
             </p>
           )}
         </div>

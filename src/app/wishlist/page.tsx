@@ -1,8 +1,9 @@
 "use client";
 
 import { useWishlist } from "../context/WishlistContext";
-import { Heart, Trash2, ArrowLeft, ShoppingBag } from "lucide-react";
+import { Heart, Trash2, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "../components/Header/Header";
 
 export default function WishlistPage() {
@@ -71,10 +72,13 @@ export default function WishlistPage() {
               <div key={product.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <Link href={`/product/${product.id}`}>
-                    <img 
+                    <Image 
                       className="w-full h-64 object-cover cursor-pointer" 
                       src={product.image} 
-                      alt={product.name} 
+                      alt={product.name}
+                      width={300}
+                      height={256}
+                      priority={false}
                     />
                   </Link>
                   <div className="absolute top-4 right-4">
