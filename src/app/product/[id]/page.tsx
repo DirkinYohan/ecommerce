@@ -8,6 +8,14 @@ import { useWishlist } from "../../context/WishlistContext";
 import { Star, Heart, Share2, Truck, RotateCcw, Shield, ArrowLeft } from "lucide-react";
 import Header from "../../components/Header/Header";
 import Link from "next/link";
+import Image from "next/image";
+
+// Definir interfaces para TypeScript
+interface ProductColor {
+  name: string;
+  image: string;
+  mainImage?: string;
+}
 
 export default function ProductDetail() {
   const params = useParams();
@@ -18,7 +26,7 @@ export default function ProductDetail() {
   const productId = parseInt(params.id as string);
   const product = products.find(p => p.id === productId);
 
-  const [selectedColor, setSelectedColor] = useState(product?.colors?.[0] || null);
+  const [selectedColor, setSelectedColor] = useState<ProductColor | null>(product?.colors?.[0] || null);
   const [selectedSize, setSelectedSize] = useState<string>(product?.sizes?.[0] || "");
   const [selectedImage, setSelectedImage] = useState<string>(product?.image || "");
   const [quantity, setQuantity] = useState(1);
@@ -53,7 +61,7 @@ export default function ProductDetail() {
   };
 
   // Función para manejar cambio de color
-  const handleColorChange = (color: any) => {
+  const handleColorChange = (color: ProductColor) => {
     setSelectedColor(color);
     // Cambiar la imagen principal al cambiar el color
     if (color.mainImage) {
@@ -62,14 +70,15 @@ export default function ProductDetail() {
   };
 
   const handleAddToCart = () => {
-    const productWithSelection = {
-      ...product,
+    // Crear el objeto exactamente como lo espera addToCart
+    const cartProduct = {
+      ...product, // Esto incluye todas las propiedades de Product
       selectedColor: selectedColor?.name,
       selectedSize,
-      quantity
+      quantity: quantity
     };
     
-    addToCart(productWithSelection);
+    addToCart(cartProduct);
     router.push("/cart");
   };
 
@@ -112,10 +121,13 @@ export default function ProductDetail() {
             <div className="space-y-4">
               {/* Imagen principal */}
               <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100">
-                <img
+                <Image
                   src={selectedImage || product.image}
                   alt={product.name}
                   className="w-full h-full object-cover"
+                  width={600}
+                  height={600}
+                  priority
                 />
               </div>
               
@@ -132,10 +144,12 @@ export default function ProductDetail() {
                           selectedImage === image ? 'border-gray-900' : 'border-transparent'
                         }`}
                       >
-                        <img
+                        <Image
                           src={image}
                           alt={`${product.name} ${index + 1}`}
                           className="w-full h-full object-cover"
+                          width={100}
+                          height={100}
                         />
                       </button>
                     ))}
@@ -185,7 +199,7 @@ export default function ProductDetail() {
                           }`}
                           style={{ 
                             backgroundColor: getColorHex(color.name),
-                            backgroundImage: `url(${color.image})`,
+                            backgroundImage: color.image ? `url(${color.image})` : undefined,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center'
                           }}
@@ -206,10 +220,12 @@ export default function ProductDetail() {
                               : 'border-gray-200 hover:border-gray-900'
                           }`}
                         >
-                          <img
+                          <Image
                             src={color.image}
                             alt={color.name}
                             className="w-full h-full object-cover"
+                            width={80}
+                            height={80}
                           />
                         </button>
                       ))}

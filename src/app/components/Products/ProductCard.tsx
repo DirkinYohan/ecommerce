@@ -5,6 +5,7 @@ import { Product } from "../../data/products";
 import Link from "next/link";
 import { useWishlist } from "../../context/WishlistContext";
 import { JSX, useState } from "react";
+import Image from "next/image";
 
 interface ProductCardProps {
   product: Product;
@@ -43,10 +44,13 @@ export default function ProductCard({ product, renderStars }: ProductCardProps) 
       <div className="relative overflow-hidden">
         {/* Imagen clickeable que lleva al detalle del producto */}
         <Link href={`/product/${product.id}`}>
-          <img 
+          <Image 
             className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer" 
             src={product.image} 
-            alt={product.name} 
+            alt={product.name}
+            width={300}
+            height={320}
+            priority={false}
           />
         </Link>
         

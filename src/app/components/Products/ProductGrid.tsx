@@ -57,7 +57,7 @@ export default function ProductGrid({ products, searchTerm, setSearchTerm }: Pro
               <div className="max-w-md mx-auto">
                 <Search size={64} className="mx-auto text-gray-300 mb-4" />
                 <p className="text-gray-500 text-xl mb-4">No se encontraron productos</p>
-                <p className="text-gray-400 mb-6">No hay productos que coincidan con "<span className="font-semibold">{searchTerm}</span>"</p>
+                <p className="text-gray-400 mb-6">No hay productos que coincidan con &quot;<span className="font-semibold">{searchTerm}</span>&quot;</p>
                 <button 
                   className="px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                   onClick={() => setSearchTerm("")}
